@@ -9,7 +9,3 @@ train:
 # Valida el modelo cargando el archivo físico y verificando el umbral de MSE
 validate:
 	python validate.py
-
-# Limpia los rastros de ejecuciones locales
-clean:
-	rm -rf mlruns model.pkl

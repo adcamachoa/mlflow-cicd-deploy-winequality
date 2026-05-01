@@ -17,7 +17,7 @@ jobs:
       - name: 🐍 Configurar Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: '3.11'
 
       # ESTE PASO ES EL QUE SOLUCIONA EL MODULENOTFOUNDERROR
       - name: 🛠️ Preparar herramientas base
@@ -29,7 +29,9 @@ jobs:
         run: make install
 
       - name: 🔨 Entrenar modelo
-        run: make train
+        run: |
+          pip install setuptools
+          make train
 
       - name: ✅ Validar modelo
         run: make validate
