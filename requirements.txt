@@ -2,4 +2,4 @@ mlflow==2.12.1
 scikit-learn==1.4.2
 pandas==2.2.2
 joblib==1.4.0
-pathlib==1.0.1
+setuptools
