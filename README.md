@@ -1,13 +1,26 @@
-# Wine Quality MLOps Pipeline
+# 🍷 Wine Quality Prediction - MLOps Pipeline
 
-Proyecto de entrenamiento y validación automatizada para la predicción de calidad de vino tinto.
+Este repositorio contiene un flujo completo de MLOps para predecir la calidad del vino tinto, integrando automatización de CI/CD y gestión de experimentos.
 
-## Estructura
-- `train.py`: Entrena una Regresión Lineal y registra métricas/firmas en MLflow.
-- `validate.py`: Valida el modelo físico contra un umbral de MSE.
-- `data/`: Contiene el dataset fisicoquímico de vinos (UCI Machine Learning).
+## 🚀 Características del Proyecto
+- **Dataset Externo:** Procesamiento de datos físicos (`winequality-red.csv`).
+- **CI/CD:** Pipeline automatizado en GitHub Actions para entrenamiento y validación.
+- **MLflow Tracking:** Registro detallado de métricas, parámetros y firmas de modelos.
+- **Calidad Asegurada:** Validación automática de métricas de error (MSE) previa a la generación de artefactos.
 
-## Cómo ejecutar
-1. Instalar: `make install`
-2. Entrenar: `make train`
-3. Validar: `make validate`
+## 🛠️ Stack Tecnológico
+- **Lenguaje:** Python 3.11
+- **ML Framework:** Scikit-Learn (Regresión Lineal)
+- **Tracking:** MLflow
+- **Automatización:** GitHub Actions & Make
+- **Análisis de Datos:** Pandas & NumPy
+
+## 📊 Ejecución Local
+Para replicar los resultados:
+1. Instalar dependencias: `make install`
+2. Entrenar el modelo: `make train`
+3. Validar calidad: `make validate`
+4. Ver UI de MLflow: `mlflow ui`
+
+## 📈 Resultados
+El modelo actual presenta un **MSE de 0.39**, superando satisfactoriamente el umbral de calidad definido de 0.8.
